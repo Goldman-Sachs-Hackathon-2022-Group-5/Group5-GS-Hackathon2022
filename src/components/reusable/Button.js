@@ -16,8 +16,8 @@ export const StyledButton = styled(Button)`
     text-align: center;
     font-family: Poppins;
     font-weight: 100;
-    width: 280px;
-    height: 50px;
+    width: 330px;
+    height: 40px;
 
 
     transition: all 0.2s ease-in-out;
@@ -28,13 +28,5 @@ export const StyledButton = styled(Button)`
         background: #fff;
         color: #010606;
     }
-
-
-    // display-inline-block;
-    // margin-bottom: 10px;
-    // display: inline-flex;
-    // flex-direction: column;
-    // justify-content: space-around;
-    // align-items: center;
   }
 `;

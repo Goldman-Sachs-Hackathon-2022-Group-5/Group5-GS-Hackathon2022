@@ -9,7 +9,6 @@ import {
   NavWrapper
 } from './NavbarComponents';
 import { ShoppingCartOutlined } from '@ant-design/icons'
-import { Button } from 'antd';
 
 const Navbar = () => {
   return (
