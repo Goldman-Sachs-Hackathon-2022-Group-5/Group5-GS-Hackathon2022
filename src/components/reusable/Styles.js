@@ -17,7 +17,7 @@ export const StyledHeading = styled.h2`
 `
 
 export const Container = styled.div`
-  width: 100%;
+  width: ${(props) => (props.width ? props.width : '100%')};
   height: 100%;
   display: flex;
   align-items: ${(props) => (props.align ? props.align : 'center')};
@@ -44,11 +44,13 @@ export const StyledRow = styled(Row)`
 export const RowContainer = styled(Row)`
 && {
   display: flex;
-  align-items: flex-start;
+  align-items: space-between;
+  justify-content: center;
   flex-direction: row;
   width: ${(props) => (props.margin ? props.margin : '100%')};
+  margin-top: ${(props) => (props.margintop ? props.margintop : '20px')};
   margin-bottom:  ${(props) => (props.marginbottom ? props.marginbottom : '20px')};
-  margin-right: ${(props) => (props.marginright ? props.marginright : '20px')};
+  margin-right: 0 //${(props) => (props.marginright ? props.marginright : '0px')};
   margin-left: ${(props) => (props.marginleft ? props.marginleft : '0px')};
 }
 `
