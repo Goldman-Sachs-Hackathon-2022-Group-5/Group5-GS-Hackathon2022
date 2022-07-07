@@ -16,3 +16,8 @@ code {
   font-family: 'Poppins';
   src: local('Poppins'), url(./assets/fonts/Poppins/Poppins-SemiBold.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: local('Poppins'), url(./assets/fonts/Poppins/Poppins-Medium.ttf) format('truetype');
+}
