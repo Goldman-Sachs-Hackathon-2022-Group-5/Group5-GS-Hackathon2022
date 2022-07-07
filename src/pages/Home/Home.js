@@ -4,6 +4,7 @@ import { Container } from '../../components/reusable/Styles';
 import './Home.css';
 import Popular from '../../components/Home/Popular';
 import Cuisines from '../../components/Home/Cuisines';
+import { getRestaurants } from '../../database/api';
 
 const Home = () => {
     return (
@@ -15,7 +16,7 @@ const Home = () => {
                     <Cuisines/>
                 </Container>
             </Container>
-
+            <button onClick={() => getRestaurants()}>click me</button>
         </body>
     );
 }
