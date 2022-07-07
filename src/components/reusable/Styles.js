@@ -21,6 +21,7 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   align-items: ${(props) => (props.align ? props.align : 'center')};
+  margin-top: ${(props) => (props.margintop ? props.margintop : '0px')};
   justify-content: flex-start;
   flex-direction: column;
 `
@@ -78,7 +79,8 @@ export const StyledTextArea = styled(Input)`
 
 export const StyledSelect = styled(Select)`
   && {
-    margin-top: 10px;
+    margin-left: ${(props) => (props.left ? props.left : '0px')};
+    margin-top: ${(props) => (props.top ? props.top : '10px')};
     margin-bottom: 10px;
     width: ${(props) => (props.width ? props.width : '100%')};
     & .ant-select-selector {

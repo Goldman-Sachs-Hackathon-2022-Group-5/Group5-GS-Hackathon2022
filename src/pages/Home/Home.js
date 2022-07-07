@@ -2,8 +2,8 @@ import React from 'react';
 import HomeBanner from '../../components/Home/Banner';
 import { Container } from '../../components/reusable/Styles';
 import './Home.css';
-import Popular from '../../components/Home/Popular';
-import Cuisines from '../../components/Home/Cuisines';
+import PopularSection from '../../components/Home/Popular';
+import CuisineSection from '../../components/Home/Cuisines';
 
 const Home = () => {
     return (
@@ -11,8 +11,8 @@ const Home = () => {
             <HomeBanner />
             <Container>
                 <Container align='flex-start' width='70%' >
-                    <Popular/>
-                    <Cuisines/>
+                    <PopularSection/>
+                    <CuisineSection/>
                 </Container>
             </Container>
 
