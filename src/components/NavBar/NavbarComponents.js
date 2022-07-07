@@ -13,8 +13,10 @@ export const Nav = styled.nav`
 
 export const NavWrapper = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: 'center';
+  height: 44px;
 `
 
 export const NavLink = styled(Link)`
@@ -48,7 +50,7 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: 'center';
   justify-content: 'center';
-  // margin-right: 0px;
+  margin-right: 20px;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -65,9 +67,10 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled(Link)`
-  border-radius: 4px;
+  border-radius: 40px;
   background: #256ce1;
-  padding: 10px 22px;
+  height: 40px;
+  width: 40px;
   color: #fff;
   outline: none;
   border: none;
