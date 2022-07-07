@@ -1,0 +1,32 @@
+.head-text {
+    position: relative;
+    color: white;
+ }
+
+/* .head-image {
+    height: ;
+} */
+
+.text-on-image {
+   position: absolute;
+   left: 15%;
+   bottom: 40%;
+   font-size: 80px;
+   font-weight: 300;
+   font-family: Poppins;
+   color: white;
+   align-items: flex-start;
+   text-align: left;
+   line-height: 35px;
+ }
+ 
+ .title {
+    color: white;
+    font-weight: 600;
+    font-size: 65px;
+ }
+
+ body.home {
+    background-color: white;
+ }
+

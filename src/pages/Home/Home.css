@@ -1,0 +1,27 @@
+/* .head-text {
+    position: relative;
+    color: white;
+ }
+
+.text-on-image {
+   position: absolute;
+   left: 15%;
+   bottom: 10%;
+   font-size: 28px;
+   font-weight: 300;
+   font-family: Poppins;
+   color: white;
+   align-items: flex-start;
+   text-align: left;
+   line-height: 0px;
+ }
+ 
+ .title {
+    color: white;
+    font-weight: 600;
+    font-size: 70px;
+ } */
+
+ body.home {
+    background-color: white;
+ }
