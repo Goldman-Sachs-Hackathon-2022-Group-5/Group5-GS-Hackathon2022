@@ -17,7 +17,7 @@ const Home = () => {
                 </Container>
             </Container>
             <div>
-                <button onClick={() => testFunction("wonjia", "17/7/2022 14:59:31")}>click me</button>
+                <button onClick={() => testFunction("MTA")}>click me</button>
             </div>
         </body>
     );

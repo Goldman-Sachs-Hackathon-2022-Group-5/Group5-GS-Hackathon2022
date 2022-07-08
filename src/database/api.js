@@ -19,8 +19,38 @@ export async function getStatus(kerberos, batchID) {
   return getStatusOfOrder;
 }
 
-export async function testFunction(kerberos, batchID) {
-  const response = await fetch('https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api//getstatus?kerberos=' + kerberos + "&batchID=" + batchID);
+export async function getRestaurantsByOffice(office) {
+  const response = await fetch(`https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api/getrestaurantbyoffice?office=${office}`);
+  const filteredrestaurants = response.json()
+  return filteredrestaurants
+}
+
+export async function getAllFoodByRestaurantId(restaurantId) {
+  const response = await fetch(`https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api/getallfoodbyrestaurant?id=${restaurantId}`);
+  const menu = response.json()
+  return menu
+}
+
+export async function getCommonOrders({deliverylocation, deliveredtime}) {
+  const response = await fetch(`https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api/getcommonorders?deliverylocation=${deliverylocation}&deliveredtime=${deliveredtime}`);
+  const commonorders = response.json()
+  return commonorders
+}
+
+export async function createOrder(data) {
+  const response = await fetch('https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api/createorder', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+
+  return response.json();
+}
+
+export async function testFunction(office) {
+  const response = await fetch(`https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api/getrestaurantbyoffice?office=${office}`);
   const responseJson = response.json();
   responseJson.then(value => {
     console.log(value);
