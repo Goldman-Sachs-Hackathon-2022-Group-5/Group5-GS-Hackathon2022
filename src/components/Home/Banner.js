@@ -4,15 +4,14 @@ import Cover from '../../assets/Images/cover.png'
 import { StyledButton } from '../reusable/Button';
 import { Container, StyledSelect } from '../reusable/Styles';
 import LOCATIONS_LIST from '../../utils/const';
+import { useSelector, useDispatch } from 'react-redux'
+import { setLocation } from '../../redux/redux';
 
 const { Option } = StyledSelect;
 
 const HomeBanner = () => {
-
-
-    const onChange = (value) => {
-        console.log(`selected ${value}`);
-    };
+    const location = useSelector((state) => state.location.value)
+    const dispatch = useDispatch()
 
     return (
         <header>
@@ -27,20 +26,19 @@ const HomeBanner = () => {
                         <StyledSelect 
                             size='large'
                             placeholder="Select your location"
-                            onChange={onChange}
-                            width={'330px'}>
+                            onChange={(value)=>{dispatch(setLocation(value))}}
+                            width={'330px'}
+                            value={location}
+                            >
                             <Option value={LOCATIONS_LIST.MTA.code}>{LOCATIONS_LIST.MTA.name}</Option>
                             <Option value={LOCATIONS_LIST.RFL.code}>{LOCATIONS_LIST.RFL.name}</Option>
                         </StyledSelect>
-                        <StyledButton>
+                        <StyledButton onClick={()=>{console.log(location)}}>
                             Explore
                         </StyledButton>
-                    </Container>
-                    
+                    </Container>       
                 </div>
-            
             </div>
-            
         </header>
     );
 }
