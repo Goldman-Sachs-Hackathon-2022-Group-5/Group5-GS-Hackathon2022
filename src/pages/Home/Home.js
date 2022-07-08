@@ -5,6 +5,7 @@ import './Home.css';
 import { testFunction } from '../../database/api';
 import PopularSection from '../../components/Home/Popular';
 import CuisineSection from '../../components/Home/Cuisines';
+import '../../components/Restaurants/RestaurantBlock.css';
 
 const Home = () => {
     return (
