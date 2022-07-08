@@ -14,4 +14,12 @@ export async function getRestaurants() {
       console.log(error);
       return null;
     });
-  }
+}
+
+export async function getRestaurantById(id) {
+  const response = await fetch(`https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api/getrestaurantbyid?id=${id}`);
+  const responseJson = response.json();
+
+  return responseJson
+  
+}

@@ -1,0 +1,26 @@
+.sectiontitle {
+    color: #403930;
+    font-weight: 600;
+    font-size: 40px;
+    font-family: Poppins;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 10px;
+ }
+ 
+ .subtitle {
+    color: #403930;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: Poppins;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 10px;
+ }
+
+ .sectionsubtitle {
+    color: #403930;
+    font-size: 17px;
+    font-family: Poppins-Medium;
+    text-align: center;
+ }
