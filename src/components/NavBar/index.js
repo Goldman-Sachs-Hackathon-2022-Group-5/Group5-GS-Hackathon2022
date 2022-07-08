@@ -12,6 +12,7 @@ import { ShoppingCartOutlined } from '@ant-design/icons'
 import { StyledSelect } from '../reusable/Styles';
 import { LOCATIONS_LIST } from '../../utils/const';
 import { useLocation } from 'react-router-dom';
+import Logo from '../../assets/Images/LongLogo.png'
 
 const { Option } = StyledSelect;
 
@@ -23,7 +24,8 @@ const Navbar = () => {
       <Nav>
         <NavWrapper>
           <NavLink to='/'>
-            <img src={'https://hackerx.org/wp-content/uploads/2020/08/Goldman-Sachs-Logo.png'} alt='logo' height='55' />
+            {/* <img src={'https://hackerx.org/wp-content/uploads/2020/08/Goldman-Sachs-Logo.png'} alt='logo' height='55' /> */}
+            <img src={Logo} alt='logo' height='55' />
           </NavLink>
           {
             curRoute.pathname !== "/" && 
