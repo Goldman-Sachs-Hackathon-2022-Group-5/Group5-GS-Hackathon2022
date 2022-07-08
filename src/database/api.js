@@ -3,23 +3,30 @@
 
 export async function getRestaurants() {
     const response = await fetch('https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api/restaurant');
-    // const myJson =  response.json(); //extract JSON from the http response
-    // do something with myJson
-    const responseJson = response.json();
-    responseJson.then(value => {
-      const body = JSON.parse(value.body);
-      console.log(body);
-      return body;
-    }).catch( error => {
-      console.log(error);
-      return null;
-    });
+    const restaurants = response.json();
+    return restaurants;
 }
 
 export async function getRestaurantById(id) {
   const response = await fetch(`https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api/getrestaurantbyid?id=${id}`);
-  const responseJson = response.json();
+  const restaurantById = response.json();
+  return restaurantById
+}
 
-  return responseJson
-  
+export async function getStatus(kerberos, batchID) {
+  const response = await fetch(`https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api//getstatus?kerberos=${kerberos}&batchID=${batchID}`);
+  const getStatusOfOrder = response.json();
+  return getStatusOfOrder;
+}
+
+export async function testFunction(kerberos, batchID) {
+  const response = await fetch('https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api//getstatus?kerberos=' + kerberos + "&batchID=" + batchID);
+  const responseJson = response.json();
+  responseJson.then(value => {
+    console.log(value);
+    return value;
+  }).catch( error => {
+    console.log(error);
+    return null;
+  });
 }

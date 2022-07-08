@@ -2,7 +2,7 @@ import React from 'react';
 import HomeBanner from '../../components/Home/Banner';
 import { Container } from '../../components/reusable/Styles';
 import './Home.css';
-import { getRestaurants } from '../../database/api';
+import { testFunction } from '../../database/api';
 import PopularSection from '../../components/Home/Popular';
 import CuisineSection from '../../components/Home/Cuisines';
 
@@ -17,7 +17,7 @@ const Home = () => {
                 </Container>
             </Container>
             <div>
-                <button onClick={() => getRestaurants()}>click me</button>
+                <button onClick={() => testFunction("wonjia", "17/7/2022 14:59:31")}>click me</button>
             </div>
         </body>
     );
