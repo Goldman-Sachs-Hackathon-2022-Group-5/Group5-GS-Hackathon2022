@@ -1,26 +1,25 @@
-.body {
-    font-family: Poppins, sans-serif;
-    margin: 1rem;
-    margin-bottom: 0rem;
-}
-
-
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 20rem));
-    gap: 2rem;
-    justify-content: left;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .card {
     overflow: hidden;
     box-shadow: 0 2px 20px #e1e5ee;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
     transition: transform 200ms ease-in;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    width: 20em;
+}
+
+.card:hover {
+    transform: scale(1.02);
 }
 
 .card .image {
@@ -30,10 +29,13 @@
     border-radius: 25px;
 }
 
-.card .title {
+.cardtitle {
+    /* position: absolute;
+    top: 10%; */
+    font-family: Poppins-Medium, sans-serif;
     color: black;
-    padding: 0 1rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
 .card .description {
@@ -52,10 +54,6 @@
     color: #d50000;
     border-radius: 0.2rem;
     transition: background 200ms ease-in, color 200ms ease-in;
-}
-
-.card:hover {
-    transform: scale(1.02);
 }
 
 .card:hover .button:hover {
