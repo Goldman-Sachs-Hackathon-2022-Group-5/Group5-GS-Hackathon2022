@@ -35,7 +35,7 @@ const Restaurant = () => {
     }, [restaurantId])
 
     const restaurantName = restaurant !== undefined ? restaurant[0].name : ''
-    const restaurantImg = restaurant !== undefined ? restaurant[0].imageurl : ''
+    const restaurantImg = restaurant !== undefined ? restaurant[0].bannerurl : ''
     const restaurantCuisine = restaurant !== undefined ? restaurant[0].cuisine : ''
     const restaurantIsHalal = restaurant !== undefined ? (restaurant[0].ishalal ? ' • Halal' : '') : ''
     const restaurantAddress = restaurant !== undefined ? restaurant[0].address : ''
