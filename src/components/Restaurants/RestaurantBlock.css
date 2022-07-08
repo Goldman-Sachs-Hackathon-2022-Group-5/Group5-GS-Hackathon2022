@@ -1,0 +1,7 @@
+.restaurantBlock {
+    align-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 100%;
+}

@@ -1,0 +1,81 @@
+.body {
+    font-family: Poppins, sans-serif;
+    margin: 1rem;
+    margin-bottom: 0rem;
+}
+
+.restaurantwrapper {
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.restaurantCard {
+    overflow: hidden;
+    box-shadow: 0 2px 20px #e1e5ee;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    width: 20em;
+}
+
+.restaurantCard:hover {
+    transform: scale(1.02);
+}
+
+.restaurantCard .image {
+    object-fit: cover;
+    width: 100%;
+    height: 12rem;
+    border-radius: 25px;
+}
+
+.restaurantCard .title {
+    /* position: absolute;
+    top: 10%; */
+    font-family: Poppins-Medium, sans-serif;
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.restaurantCard .description {
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: #6d6b6b;
+}
+
+.restaurantCard .button {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid #d50000;
+    background: transparent;
+    color: #d50000;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.restaurantCard:hover .button:hover {
+    background: #d50000;
+    color: white;
+}
+
+.restaurantCard .peopleIcon {
+    height: 1rem;
+    width: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+}
+
+.restaurantCard .peopleBox {
+    display: flex;
+    flex-direction: row;
+}

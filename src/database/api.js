@@ -6,12 +6,9 @@ export async function getRestaurants() {
     // const myJson =  response.json(); //extract JSON from the http response
     // do something with myJson
     const responseJson = response.json();
-    responseJson.then(value => {
-      const body = JSON.parse(value.body);
-      console.log(body);
-      return body;
-    }).catch( error => {
-      console.log(error);
-      return null;
-    });
+    // console.log(responseJson);
+    // responseJson.then(x => {
+    //   console.log(x.body)
+    // });
+    return responseJson;
   }
