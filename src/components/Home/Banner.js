@@ -3,7 +3,7 @@ import '../styles.css'
 import Cover from '../../assets/Images/cover.png'
 import { StyledButton } from '../reusable/Button';
 import { Container, StyledSelect } from '../reusable/Styles';
-import LOCATIONS_LIST from '../../utils/const';
+import { LOCATIONS_LIST } from '../../utils/const';
 import { useSelector, useDispatch } from 'react-redux'
 import { setLocation } from '../../redux/redux';
 

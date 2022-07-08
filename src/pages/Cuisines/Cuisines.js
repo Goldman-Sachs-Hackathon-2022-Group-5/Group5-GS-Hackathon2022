@@ -4,9 +4,14 @@ import { Breadcrumb } from 'antd';
 import { Container } from '../../components/reusable/Styles';
 import CoverSmall from '../../assets/Images/coversmall.png';
 import './Cuisines.css'
+import { useLocation } from 'react-router-dom';
 
 
 const Cuisines = () => {
+    const cuisine = useLocation();
+    const cuisineName = cuisine.pathname.split('/')[2]
+    const cName = cuisineName.charAt(0).toUpperCase() + cuisineName.slice(1)
+    //collect restaurant data
   return (
       <>
         <HeaderBanner url={CoverSmall} title={''}/>
@@ -17,9 +22,9 @@ const Cuisines = () => {
                         <a href="/">Home</a>
                     </Breadcrumb.Item>
                     <Breadcrumb.Item><a href="/">Cuisines</a></Breadcrumb.Item>
-                    <Breadcrumb.Item style={{color: '#346EBE'}}>Western</Breadcrumb.Item>
+                    <Breadcrumb.Item style={{color: '#346EBE'}}>{cName}</Breadcrumb.Item>
                 </Breadcrumb>
-                <h3 className="sectiontitle">Western Cuisine</h3>
+                <h3 className="sectiontitle">{cName} Cuisine</h3>
             </Container>
         </Container>
       </>
