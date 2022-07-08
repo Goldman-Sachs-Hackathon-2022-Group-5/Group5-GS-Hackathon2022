@@ -5,6 +5,8 @@ import { Container } from '../../components/reusable/Styles';
 import './Restaurants.css'
 import { useLocation } from 'react-router-dom';
 import { getRestaurantById } from '../../database/api';
+import CartDrawer from '../../components/AddToCart/Drawer';
+import { StyledButton } from '../../components/reusable/Button';
 
 
 const { TabPane } = Tabs;
@@ -12,6 +14,15 @@ const { TabPane } = Tabs;
 const Restaurant = () => {
     const [restaurant, setRestaurant] = useState()
     const restaurantId = useLocation().pathname.split('/')[2]
+    const [isCartVisible, setCartVisible] = useState(false);
+
+    const showDrawer = () => {
+        setCartVisible(true);
+    };
+  
+    const onClose = () => {
+        setCartVisible(false);
+    };
     
     useEffect(() => {
         getRestaurantById(restaurantId).then(value => {
@@ -61,9 +72,7 @@ const Restaurant = () => {
                 <h4 className="sectionsubtitle">
                     {restaurantCuisine} • {restaurantAddress} {restaurantIsHalal}
                 </h4>
-
-
-                {/* restaurant details / how many ppl ordering at the moment */}
+                {/* how many ppl ordering at the moment */}
 
                 <Tabs 
                     defaultActiveKey="1" 
@@ -78,7 +87,7 @@ const Restaurant = () => {
                 </Tabs>
 
                 <h3 className="subtitle" ref={popularRef}>Popular Picks</h3>
-
+                <StyledButton onClick={showDrawer}>Get this</StyledButton>
 
             
                 <h3 className="subtitle" ref={setsRef}>Sets</h3>
@@ -90,6 +99,7 @@ const Restaurant = () => {
         
 
                 <h3 className="subtitle" ref={beverageRef}>Beverages</h3>
+                <CartDrawer onClose={onClose} visible={isCartVisible}/>
 
                
             </Container>
