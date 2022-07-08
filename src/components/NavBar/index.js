@@ -10,7 +10,7 @@ import {
 import { Avatar } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons'
 import { StyledSelect } from '../reusable/Styles';
-import LOCATIONS_LIST from '../../utils/const';
+import { LOCATIONS_LIST } from '../../utils/const';
 import { useLocation } from 'react-router-dom';
 
 const { Option } = StyledSelect;
