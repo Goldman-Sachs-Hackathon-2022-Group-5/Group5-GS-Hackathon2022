@@ -2,7 +2,7 @@ import React from 'react';
 import HomeBanner from '../../components/Home/Banner';
 import { Container } from '../../components/reusable/Styles';
 import './Home.css';
-import { getRestaurants } from '../../database/api';
+import { testFunction } from '../../database/api';
 import PopularSection from '../../components/Home/Popular';
 import CuisineSection from '../../components/Home/Cuisines';
 import '../../components/Restaurants/RestaurantBlock.css';
@@ -17,11 +17,8 @@ const Home = () => {
                     <CuisineSection/>
                 </Container>
             </Container>
-            {/* <div>
-                <RestaurantBlock className="restaurantBlock"/>
-            </div> */}
             <div>
-                <button onClick={() => getRestaurants()}>click me</button>
+                <button onClick={() => testFunction("MTA")}>click me</button>
             </div>
         </body>
     );
