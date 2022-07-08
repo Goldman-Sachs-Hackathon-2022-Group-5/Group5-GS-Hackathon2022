@@ -4,14 +4,9 @@ import "./restaurantCard.css"
 import peopleIcon from "../../assets/Images/peopleIcon.png";
 
 export const RestaurantCard = ({url, title, desc, numPeople}) => {
-    let navigate = useNavigate();
-    const routeChange = () => {
-        let path = '/restaurant';
-        navigate(path);
-    }
     return (
         <div className="restaurantwrapper">
-            <div className="restaurantCard" onClick={() =>routeChange()}>
+            <div className="restaurantCard">
                 <div className="body">
                     <img src={url} className="image" />
                     <h2 className="title"> {title} </h2>
