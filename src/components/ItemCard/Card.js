@@ -6,11 +6,11 @@ export const Card = ({url, title, desc}) => {
         <div className="wrapper">
             <div className="card">
                 <div className="body">
-                    <img src={url} height='310px' width="100%" />
+                    <img src={url} className="image" />
                     <h2 className="title"> {title} </h2>
                     <p className="description"> {desc} </p>
                 </div>
-                <button className="button">press here</button>
+                <button className="button">Start ordering!</button>
             </div>
         </div>
     )
