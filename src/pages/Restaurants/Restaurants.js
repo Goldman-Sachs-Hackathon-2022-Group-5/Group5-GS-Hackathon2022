@@ -5,6 +5,7 @@ import { Container } from '../../components/reusable/Styles';
 import './Restaurants.css'
 import { useLocation } from 'react-router-dom';
 import { getRestaurantById } from '../../database/api';
+import { FoodBlock } from '../../components/Food/FoodBlock';
 
 
 const { TabPane } = Tabs;
@@ -79,7 +80,7 @@ const Restaurant = () => {
 
                 <h3 className="subtitle" ref={popularRef}>Popular Picks</h3>
 
-
+                {/* <FoodBlock id={restaurantId}/> */}
             
                 <h3 className="subtitle" ref={setsRef}>Sets</h3>
 
