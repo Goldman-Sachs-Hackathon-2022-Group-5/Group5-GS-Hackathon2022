@@ -31,8 +31,14 @@ const AddToCartDrawer = ({onClose, visible, food}) => {
 
   return (
     <Drawer placement="right" onClose={onClose} visible={visible} width={'30%'}>
-        <p>{food.name}</p>
-        <p>{food.price}</p>
+        <div className='cartitem'>
+            <img className="cartimg" src={food.url} alt=''/>
+            <div className='cartdetails'>
+                <p className='carttitle'>{food.name}</p>
+                <p className='cartprice'>${food.price}.00</p>
+            </div>
+        </div>
+        
         <div className='row'>
             <Button onClick={decrement}>-</Button>
             <h3 className='counter'> {count} </h3>

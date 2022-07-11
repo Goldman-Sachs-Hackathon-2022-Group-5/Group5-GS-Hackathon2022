@@ -8,6 +8,8 @@ import { getRestaurantById } from '../../database/api';
 import { FoodBlock } from '../../components/Food/FoodBlock';
 import CartDrawer from '../../components/AddToCart/Drawer';
 import peopleIcon from "../../assets/Images/peopleIcon.png";
+import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
+import { Avatar, Tooltip } from 'antd';
 
 const { TabPane } = Tabs;
 
@@ -77,8 +79,20 @@ const Restaurant = () => {
                     {restaurantCuisine} • {restaurantAddress} {restaurantIsHalal}
                 </h4>
                 <div className="peopleBox">
-                    <img src={peopleIcon} style={{marginLeft: '0px', marginRight: '0.5rem', height: '1rem'}} alt='' />
-                    <p style={{ marginBottom: 0}}>{5} other people are getting this</p>
+                <Avatar.Group
+                    maxCount={2}
+                    maxPopoverTrigger="click"
+                    size="large"
+                    maxStyle={{ color: '#f56a00', backgroundColor: '#fde3cf', cursor: 'pointer' }}
+                    >
+                    <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                    <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
+                    <Tooltip title="Ant User" placement="top">
+                        <Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />
+                    </Tooltip>
+                    <Avatar style={{ backgroundColor: '#1890ff' }} icon={<AntDesignOutlined />} />
+                </Avatar.Group>
+                    <p style={{ marginBottom: 0, marginLeft: '1rem'}}>{5} other people are getting this</p>
                 </div>
 
                 <Tabs 
