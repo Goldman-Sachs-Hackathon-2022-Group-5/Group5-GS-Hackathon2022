@@ -14,3 +14,33 @@
     margin-right: 30px;
     margin-left: 30px;
  }
+
+ .cartimg {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.5rem;
+ }
+
+ .cartdetails {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+ }
+
+ .cartitem {
+   display: flex;
+   flex-direction: row;
+}
+
+.carttitle {
+   font-family: Poppins, sans-serif;
+   color: black;
+   font-size: 1.3rem;
+   margin-bottom: 0rem;
+   font-weight: 600;
+}
+
+.cartprice {
+   font-size: 1.2rem;
+   font-family: Poppins-Medium;
+}

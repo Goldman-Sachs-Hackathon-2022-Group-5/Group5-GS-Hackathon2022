@@ -13,7 +13,10 @@ export const FoodCard = ({imageUrl, name, desc, price, buttonFunction}) => {
                         </div>
                         <div className="footer">
                             <div className="price">${price}.00</div>
-                            <img src={addItemIcon} className="button" onClick={buttonFunction} alt=""/>
+                            <img src={addItemIcon} 
+                                className="button" 
+                                onClick={buttonFunction} 
+                                alt=""/>
                         </div>
                         
                     </div>

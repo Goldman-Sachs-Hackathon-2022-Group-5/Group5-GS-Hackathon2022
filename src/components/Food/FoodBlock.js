@@ -9,10 +9,16 @@ export const FoodBlock = ({id, buttonFunction}) => {
         const foods = getAllFoodByRestaurantId(id);
         foods.then(res => {
             const array = res;
-            const temp = array.map(({id, name, price, url, status}) => {
-                if (status) {
+            const temp = array.map(food => {
+                if (food.status) {
                     return (
-                        <FoodCard key={id} imageUrl={url} name={name} desc={"AAAAAAAA"} price={price} buttonFunction={buttonFunction}/>
+                        <FoodCard 
+                            key={food.id} 
+                            imageUrl={food.url} 
+                            name={food.name} 
+                            desc={"AAAAAAAA"} 
+                            price={food.price} 
+                            buttonFunction={() => buttonFunction(food)}/>
                     )
                 }
             })
