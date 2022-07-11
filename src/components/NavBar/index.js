@@ -15,12 +15,18 @@ import { LOCATIONS_LIST } from '../../utils/const';
 import { useLocation } from 'react-router-dom';
 import Logo from '../../assets/Images/LongLogo.png'
 import CartDrawer from '../Cart/Drawer';
+import { useSelector, useDispatch } from 'react-redux'
+import { setLocation } from '../../redux/redux';
+
+
 
 const { Option } = StyledSelect;
 
 const Navbar = () => {
   const curRoute = useLocation();
   const [isCartVisible, setCartVisible] = useState(false);
+  const location = useSelector((state) => state.location.value)
+  const dispatch = useDispatch()
 
   const showDrawer = () => {
       setCartVisible(true);
@@ -35,7 +41,6 @@ const Navbar = () => {
       <Nav>
         <NavWrapper>
           <NavLink to='/'>
-            {/* <img src={'https://hackerx.org/wp-content/uploads/2020/08/Goldman-Sachs-Logo.png'} alt='logo' height='55' /> */}
             <img src={Logo} alt='logo' height='55' />
           </NavLink>
           {
@@ -43,11 +48,11 @@ const Navbar = () => {
             <StyledSelect 
               size='large'
               placeholder="Select your location"
-              // onChange={(value)=>{dispatch(setLocation(value))}}
+              onChange={(value)=>{dispatch(setLocation(value))}}
               width={'330px'}
               top={'0px'}
               left={'40px'}
-              // value={location}
+              value={location}
               >
               <Option value={LOCATIONS_LIST.MTA.code}>{LOCATIONS_LIST.MTA.name}</Option>
               <Option value={LOCATIONS_LIST.RFL.code}>{LOCATIONS_LIST.RFL.name}</Option>

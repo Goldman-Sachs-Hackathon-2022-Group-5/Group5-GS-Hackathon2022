@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles.css'
 import Cover from '../../assets/Images/cover.png'
 import { StyledButton } from '../reusable/Button';
@@ -11,6 +11,7 @@ const { Option } = StyledSelect;
 
 const HomeBanner = () => {
     const location = useSelector((state) => state.location.value)
+    const [local, setLocal] = useState('')
     const dispatch = useDispatch()
 
     return (
@@ -26,14 +27,14 @@ const HomeBanner = () => {
                         <StyledSelect 
                             size='large'
                             placeholder="Select your location"
-                            onChange={(value)=>{dispatch(setLocation(value))}}
+                            onChange={(value)=>{setLocal(value)}}
                             width={'330px'}
                             value={location}
                             >
                             <Option value={LOCATIONS_LIST.MTA.code}>{LOCATIONS_LIST.MTA.name}</Option>
                             <Option value={LOCATIONS_LIST.RFL.code}>{LOCATIONS_LIST.RFL.name}</Option>
                         </StyledSelect>
-                        <StyledButton onClick={()=>{console.log(location)}}>
+                        <StyledButton onClick={()=>{dispatch(setLocation(local))}}>
                             Explore
                         </StyledButton>
                     </Container>       
