@@ -2,14 +2,14 @@ import React from 'react'
 import { RestaurantBlock } from '../Restaurants/RestaurantBlock';
 import './styles.css';
 
-const PopularSection = () => {
+const PopularSection = ({location, locString}) => {
   return (
     <div className='column'>
       <div className='row'>
-          <h3 className="sectiontitle">Popular picks for today</h3>
+          <h3 className="sectiontitle">Popular picks for today {locString}</h3>
       </div>
       <div className='gallery'>
-        <RestaurantBlock />
+        <RestaurantBlock location={location}/>
       </div>
     </div>
     

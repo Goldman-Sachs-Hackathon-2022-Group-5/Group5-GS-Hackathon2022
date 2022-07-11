@@ -2,25 +2,25 @@ import React from 'react';
 import HomeBanner from '../../components/Home/Banner';
 import { Container } from '../../components/reusable/Styles';
 import './Home.css';
-import { getAllFoodByRestaurantId } from '../../database/api';
 import PopularSection from '../../components/Home/Popular';
 import CuisineSection from '../../components/Home/Cuisines';
 import '../../components/Restaurants/RestaurantBlock.css';
-import { FoodCard } from '../../components/Food/FoodCard';
+import { useSelector } from 'react-redux'
+
 
 const Home = () => {
+    const location = useSelector((state) => state.location.value)
+    const locString = location !== undefined ? `near ${location}` : ''
+
     return (
         <body className="home">
             <HomeBanner />
             <Container>
                 <Container align='flex-start' width='70%' >
-                    <PopularSection/>
+                    <PopularSection location={location} locString={locString}/>
                     <CuisineSection/>
                 </Container>
             </Container>
-            <div>
-                <button onClick={() => getAllFoodByRestaurantId(1)}>click me</button>
-            </div>
         </body>
     );
 }
