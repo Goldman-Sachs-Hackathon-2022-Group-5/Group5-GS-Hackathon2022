@@ -1,7 +1,7 @@
 import "../Food/foodCard.css";
 import addItemIcon from "../../assets/Images/AddItemIcon.jpg";
 
-export const FoodCard = ({imageUrl, name, desc, price}) => {
+export const FoodCard = ({imageUrl, name, desc, price, buttonFunction}) => {
     return (
         <div className='wrapper'>
             <div className='foodCard'>
@@ -14,7 +14,7 @@ export const FoodCard = ({imageUrl, name, desc, price}) => {
                         </div>
                     </div>
                     <div className="bottom">
-                        <img src={addItemIcon} className="button" />
+                        <img src={addItemIcon} className="button" onClick={buttonFunction}/>
                         <div className="price">{price}</div>
                     </div>
                 </div>

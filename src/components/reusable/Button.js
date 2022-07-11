@@ -14,7 +14,8 @@ export const StyledButton = styled(Button)`
     text-align: center;
     font-family: Poppins;
     font-weight: 100;
-    width: 330px;
+    width: ${(props) => (props.width ? props.width : '330px')};
+    margin-right: ${(props) => (props.right ? props.right : '0px')};
     height: 40px;
 
 
@@ -25,6 +26,7 @@ export const StyledButton = styled(Button)`
         transition: all 0.2s ease-in-out;
         background: #fff;
         color: #010606;
+        border: 2px solid #4D5566;
     }
   }
 `;

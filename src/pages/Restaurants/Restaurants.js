@@ -6,6 +6,8 @@ import './Restaurants.css'
 import { useLocation } from 'react-router-dom';
 import { getRestaurantById } from '../../database/api';
 import { FoodBlock } from '../../components/Food/FoodBlock';
+import CartDrawer from '../../components/AddToCart/Drawer';
+import { StyledButton } from '../../components/reusable/Button';
 
 
 const { TabPane } = Tabs;
@@ -13,6 +15,15 @@ const { TabPane } = Tabs;
 const Restaurant = () => {
     const [restaurant, setRestaurant] = useState()
     const restaurantId = useLocation().pathname.split('/')[2]
+    const [isCartVisible, setCartVisible] = useState(false);
+
+    const showDrawer = () => {
+        setCartVisible(true);
+    };
+  
+    const onClose = () => {
+        setCartVisible(false);
+    };
     
     useEffect(() => {
         getRestaurantById(restaurantId).then(value => {
@@ -25,7 +36,7 @@ const Restaurant = () => {
     }, [restaurantId])
 
     const restaurantName = restaurant !== undefined ? restaurant[0].name : ''
-    const restaurantImg = restaurant !== undefined ? restaurant[0].imgurl : ''
+    const restaurantImg = restaurant !== undefined ? restaurant[0].bannerurl : ''
     const restaurantCuisine = restaurant !== undefined ? restaurant[0].cuisine : ''
     const restaurantIsHalal = restaurant !== undefined ? (restaurant[0].ishalal ? ' • Halal' : '') : ''
     const restaurantAddress = restaurant !== undefined ? restaurant[0].address : ''
@@ -62,9 +73,7 @@ const Restaurant = () => {
                 <h4 className="sectionsubtitle">
                     {restaurantCuisine} • {restaurantAddress} {restaurantIsHalal}
                 </h4>
-
-
-                {/* restaurant details / how many ppl ordering at the moment */}
+                {/* how many ppl ordering at the moment */}
 
                 <Tabs 
                     defaultActiveKey="1" 
@@ -80,9 +89,11 @@ const Restaurant = () => {
 
                 <h3 className="subtitle" ref={popularRef}>Popular Picks</h3>
 
-                {/* <div className="gallery">
-                    <FoodBlock id={restaurantId}/>
-                </div> */}
+                <div className="gallery">
+                    <FoodBlock id={restaurantId} buttonFunction={showDrawer}/>
+                </div>
+
+                {/* <StyledButton onClick={showDrawer}>Get this</StyledButton> */}
             
                 <h3 className="subtitle" ref={setsRef}>Sets</h3>
 
@@ -97,6 +108,7 @@ const Restaurant = () => {
                 </div> */}
 
                 <h3 className="subtitle" ref={beverageRef}>Beverages</h3>
+                <CartDrawer onClose={onClose} visible={isCartVisible}/>
 
                 {/* <div className="gallery">
                     <FoodBlock id={restaurantId}/>
