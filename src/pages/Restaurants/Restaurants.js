@@ -3,7 +3,7 @@ import { HeaderBanner } from '../../components/reusable/Banners'
 import { Breadcrumb, Tabs } from 'antd';
 import { Container } from '../../components/reusable/Styles';
 import './Restaurants.css'
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { getRestaurantById } from '../../database/api';
 import { FoodBlock } from '../../components/Food/FoodBlock';
 import CartDrawer from '../../components/AddToCart/Drawer';
@@ -15,9 +15,11 @@ const Restaurant = () => {
     const [restaurant, setRestaurant] = useState()
     const restaurantId = useLocation().pathname.split('/')[2]
     const [isCartVisible, setCartVisible] = useState(false);
+    const [food, setFood] = useState({name: '', price: ''})
 
-    const showDrawer = () => {
+    const showDrawer = (food) => {
         setCartVisible(true);
+        setFood(food)
     };
   
     const onClose = () => {
@@ -63,9 +65,11 @@ const Restaurant = () => {
             <Container align='flex-start' width='70%' margintop='20px'>
                 <Breadcrumb style={{fontSize: '20px'}}>
                     <Breadcrumb.Item>
-                        <a href="/">Home</a>
+                        <Link to="/">Home</Link>
                     </Breadcrumb.Item>
-                    <Breadcrumb.Item><a href="/">Restaurants</a></Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                        <Link to="/">Restaurants</Link>
+                    </Breadcrumb.Item>
                     <Breadcrumb.Item style={{color: '#346EBE'}}>{restaurantName}</Breadcrumb.Item>
                 </Breadcrumb>
                 <h3 className="sectiontitle">{restaurantName}</h3>
@@ -76,7 +80,6 @@ const Restaurant = () => {
                     <img src={peopleIcon} style={{marginLeft: '0px', marginRight: '0.5rem', height: '1rem'}} alt='' />
                     <p style={{ marginBottom: 0}}>{5} other people are getting this</p>
                 </div>
-                {/* how many ppl ordering at the moment */}
 
                 <Tabs 
                     defaultActiveKey="1" 
@@ -111,13 +114,17 @@ const Restaurant = () => {
                 </div> */}
 
                 <h3 className="subtitle" ref={beverageRef}>Beverages</h3>
-                <CartDrawer onClose={onClose} visible={isCartVisible}/>
 
                 {/* <div className="gallery">
                     <FoodBlock id={restaurantId}/>
                 </div> */}
                
             </Container>
+            <CartDrawer 
+                onClose={onClose} 
+                visible={isCartVisible}
+                food={food}
+            />
         </Container>
       </>
   )

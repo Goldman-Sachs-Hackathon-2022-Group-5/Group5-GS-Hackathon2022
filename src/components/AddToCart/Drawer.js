@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import { Button, Drawer } from 'antd';
 import { StyledButton } from '../reusable/Button';
+import { useDispatch } from 'react-redux'
 import './Drawer.css'
+import { addToCart } from '../../redux/cartredux';
 
-const AddToCartDrawer = ({onClose, visible}) => {
+const AddToCartDrawer = ({onClose, visible, food}) => {
     const [count, setCount] = useState(1)
+    const dispatch = useDispatch()
 
     const increment = () => {
         setCount(val => val+1)
@@ -18,18 +21,25 @@ const AddToCartDrawer = ({onClose, visible}) => {
         }
     }
 
+    const onAddToCart = (food, quantity) => {
+        const item = {
+            food: food,
+            quantity: quantity
+        }
+        dispatch(addToCart(item))
+    }
+
   return (
     <Drawer placement="right" onClose={onClose} visible={visible} width={'30%'}>
-        <p>Item image</p>
-        <p>Item title</p>
-        <p>Item price</p>
+        <p>{food.name}</p>
+        <p>{food.price}</p>
         <div className='row'>
             <Button onClick={decrement}>-</Button>
             <h3 className='counter'> {count} </h3>
             <Button onClick={increment}>+</Button>
         </div>
         <div className='row'>
-            <StyledButton width={'90%'} onClick={()=>{console.log('add to cart')}}>
+            <StyledButton width={'90%'} onClick={onAddToCart}>
                 Add to Cart
             </StyledButton>
         </div>
