@@ -15,25 +15,19 @@
     margin-top: 20px;
     margin-right: 20px;
     margin-bottom: 5px;
-    width: 30rem;
+    width: 25rem;
+    height: 12rem;
 }
 
 .foodCard .body {
     display: flex;
-    flex-direction: column;
-    margin: 1rem;
-}
-
-.foodCard .upper {
-    display: flex;
     flex-direction: row;
+    margin: 1rem;
 }
 
 .foodCard .text {
     display: flex;
     flex-direction: column;
-    margin-left: 2rem;
-    width: 15rem;
 }
 
 .foodCard .image {
@@ -56,18 +50,26 @@
     font-size: 0.9rem;
     overflow: auto;
     overflow-wrap: break-word;
-    width: 15rem;
-    height: 8rem;
 }
 
-.foodCard .bottom {
+.foodCard .details {
     display: flex;
-    flex-direction: row-reverse;
-    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1rem;
+    width: 12rem;
+}
+
+.foodCard .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .foodCard .price {
-    font-size: 1.5rem;;
+    font-size: 1.5rem;
+    font-family: Poppins-Medium;
 }
 
 .foodCard .button {

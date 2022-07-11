@@ -19,6 +19,19 @@ export const NavWrapper = styled.div`
   height: 44px;
 `
 
+export const IconDiv = styled.div`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 2rem 0 0.5rem;
+  height: 100%;
+  cursor: pointer;
+  &.active {
+  color: #15cdfc;
+}
+`
+
 export const NavLink = styled(Link)`
   color: #fff;
   display: flex;

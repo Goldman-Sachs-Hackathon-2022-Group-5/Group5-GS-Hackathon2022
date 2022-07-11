@@ -7,8 +7,7 @@ import { useLocation } from 'react-router-dom';
 import { getRestaurantById } from '../../database/api';
 import { FoodBlock } from '../../components/Food/FoodBlock';
 import CartDrawer from '../../components/AddToCart/Drawer';
-import { StyledButton } from '../../components/reusable/Button';
-
+import peopleIcon from "../../assets/Images/peopleIcon.png";
 
 const { TabPane } = Tabs;
 
@@ -73,6 +72,10 @@ const Restaurant = () => {
                 <h4 className="sectionsubtitle">
                     {restaurantCuisine} • {restaurantAddress} {restaurantIsHalal}
                 </h4>
+                <div className="peopleBox">
+                    <img src={peopleIcon} style={{marginLeft: '0px', marginRight: '0.5rem', height: '1rem'}} alt='' />
+                    <p style={{ marginBottom: 0}}>{5} other people are getting this</p>
+                </div>
                 {/* how many ppl ordering at the moment */}
 
                 <Tabs 
@@ -89,7 +92,7 @@ const Restaurant = () => {
 
                 <h3 className="subtitle" ref={popularRef}>Popular Picks</h3>
 
-                <div className="gallery">
+                <div className="foodgallery">
                     <FoodBlock id={restaurantId} buttonFunction={showDrawer}/>
                 </div>
 

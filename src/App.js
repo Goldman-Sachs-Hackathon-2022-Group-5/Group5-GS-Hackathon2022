@@ -15,7 +15,6 @@ function App() {
         <Route path='/cuisine/:cuisineid' element={<Cuisines />} />
         <Route path='/restaurants/:restaurantid' element={<Restaurant/>} />
         <Route path='/menu' element={<Home/>} />
-        <Route path='/cart' element={<Home/>} />
       </Routes>
     </Router>
   );
