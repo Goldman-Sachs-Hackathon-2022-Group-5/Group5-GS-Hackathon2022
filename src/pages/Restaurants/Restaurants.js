@@ -7,7 +7,6 @@ import { useLocation, Link } from 'react-router-dom';
 import { getRestaurantById } from '../../database/api';
 import { FoodBlock } from '../../components/Food/FoodBlock';
 import CartDrawer from '../../components/AddToCart/Drawer';
-import peopleIcon from "../../assets/Images/peopleIcon.png";
 import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
 import { Avatar, Tooltip } from 'antd';
 

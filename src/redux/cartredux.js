@@ -9,9 +9,6 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-        // if (state.itemsInCart.includes(action.payload.food)) {
-
-        // }
       state.itemsInCart.push(action.payload) //action.payload is the whole item
     },
     clearCart: (state) => {

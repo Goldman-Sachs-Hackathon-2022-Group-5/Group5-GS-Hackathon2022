@@ -1,0 +1,84 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+ }
+
+ .counter {
+    font-family: Poppins;
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-right: 30px;
+    margin-left: 30px;
+ }
+
+ .cartItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+.itemcard {
+   overflow: hidden;
+   box-shadow: 0 2px 20px #e1e5ee;
+   border-radius: 0.5rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   cursor: pointer;
+   transition: transform 200ms ease-in;
+   margin-top: 20px;
+   margin-right: 20px;
+   margin-bottom: 5px;
+   width: 25rem;
+   height: 12rem;
+}
+
+.itemcard .body {
+   display: flex;
+   flex-direction: row;
+   margin: 1rem;
+}
+
+.itemcard .text {
+   display: flex;
+   flex-direction: column;
+}
+
+.itemcard .image {
+   object-fit: cover;
+   width: 10rem;
+   height: 10rem;
+   border-radius: 5px;
+}
+
+.itemcard .title {
+   font-family: Poppins-Medium, sans-serif;
+   color: black;
+   font-size: 1.2rem;
+   margin-bottom: 0rem;
+}
+
+.itemcard .details {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-left: 1rem;
+   width: 12rem;
+}
+
+.itemcard .footer {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.itemcard .price {
+   font-size: 1.5rem;
+   font-family: Poppins-Medium;
+}
