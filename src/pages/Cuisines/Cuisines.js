@@ -5,12 +5,15 @@ import { Container } from '../../components/reusable/Styles';
 import CoverSmall from '../../assets/Images/coversmall.png';
 import './Cuisines.css'
 import { useLocation, Link } from 'react-router-dom';
+import { CuisineRestaurantBlock } from '../../components/Restaurants/CuisineRestaurantBlock';
+import { useSelector } from 'react-redux';
 
 
 const Cuisines = () => {
     const cuisine = useLocation();
-    const cuisineName = cuisine.pathname.split('/')[2]
-    const cName = cuisineName.charAt(0).toUpperCase() + cuisineName.slice(1)
+    const cuisineName = cuisine.pathname.split('/')[2];
+    const cName = cuisineName.charAt(0).toUpperCase() + cuisineName.slice(1);
+    const location = useSelector((state) => state.location.value);
     //collect restaurant data
   return (
       <>
@@ -27,6 +30,9 @@ const Cuisines = () => {
                     <Breadcrumb.Item style={{color: '#346EBE'}}>{cName}</Breadcrumb.Item>
                 </Breadcrumb>
                 <h3 className="sectiontitle">{cName} Cuisine</h3>
+                <div className="restaurantGallery">
+                    <CuisineRestaurantBlock location={location} cuisine={cuisine}/>
+                </div>
             </Container>
         </Container>
       </>

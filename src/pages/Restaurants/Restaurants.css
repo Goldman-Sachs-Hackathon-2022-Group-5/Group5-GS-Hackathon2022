@@ -40,7 +40,7 @@
    margin-right: 0.5rem;
 }
 
- .foodgallery {
+.foodgallery {
    align-content: space-between;
    display: flex;
    flex-wrap: wrap;
