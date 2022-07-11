@@ -1,0 +1,17 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    overflow: scroll;
+ }
+
+ .counter {
+    font-family: Poppins;
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-right: 30px;
+    margin-left: 30px;
+ }
