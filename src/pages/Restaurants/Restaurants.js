@@ -5,6 +5,7 @@ import { Container } from '../../components/reusable/Styles';
 import './Restaurants.css'
 import { useLocation } from 'react-router-dom';
 import { getRestaurantById } from '../../database/api';
+import { FoodBlock } from '../../components/Food/FoodBlock';
 import CartDrawer from '../../components/AddToCart/Drawer';
 import { StyledButton } from '../../components/reusable/Button';
 
@@ -87,20 +88,31 @@ const Restaurant = () => {
                 </Tabs>
 
                 <h3 className="subtitle" ref={popularRef}>Popular Picks</h3>
-                <StyledButton onClick={showDrawer}>Get this</StyledButton>
 
+                <div className="gallery">
+                    <FoodBlock id={restaurantId} buttonFunction={showDrawer}/>
+                </div>
+
+                {/* <StyledButton onClick={showDrawer}>Get this</StyledButton> */}
             
                 <h3 className="subtitle" ref={setsRef}>Sets</h3>
 
-
+                {/* <div className="gallery">
+                    <FoodBlock id={restaurantId}/>
+                </div> */}
 
                 <h3 className="subtitle" ref={alacarteRef}>Ala Carte</h3>
 
-        
+                {/* <div className="gallery">
+                    <FoodBlock id={restaurantId}/>
+                </div> */}
 
                 <h3 className="subtitle" ref={beverageRef}>Beverages</h3>
                 <CartDrawer onClose={onClose} visible={isCartVisible}/>
 
+                {/* <div className="gallery">
+                    <FoodBlock id={restaurantId}/>
+                </div> */}
                
             </Container>
         </Container>

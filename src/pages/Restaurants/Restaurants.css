@@ -24,3 +24,11 @@
     font-family: Poppins-Medium;
     text-align: center;
  }
+
+ .gallery {
+   align-content: space-between;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   height: 100%;
+}

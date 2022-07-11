@@ -28,6 +28,7 @@ export async function getRestaurantsByOffice(office) {
 export async function getAllFoodByRestaurantId(restaurantId) {
   const response = await fetch(`https://qw8s9n3udl.execute-api.ap-southeast-1.amazonaws.com/api/getallfoodbyrestaurant?id=${restaurantId}`);
   const menu = response.json()
+  menu.then(res => {console.log(res)});
   return menu
 }
 

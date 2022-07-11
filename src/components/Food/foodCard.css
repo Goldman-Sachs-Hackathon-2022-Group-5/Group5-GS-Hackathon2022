@@ -1,0 +1,76 @@
+.wrapper {
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.foodCard {
+    overflow: hidden;
+    box-shadow: 0 2px 20px #e1e5ee;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    width: 30rem;
+}
+
+.foodCard .body {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.foodCard .upper {
+    display: flex;
+    flex-direction: row;
+}
+
+.foodCard .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    width: 15rem;
+}
+
+.foodCard .image {
+    object-fit: cover;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5px;
+}
+
+.foodCard .title {
+    font-family: Poppins-Medium, sans-serif;
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 0rem;
+}
+
+.foodCard .description {
+    font-family: Poppins-Medium, sans-serif;
+    color: rgb(104, 103, 103);
+    font-size: 0.9rem;
+    overflow: auto;
+    overflow-wrap: break-word;
+    width: 15rem;
+    height: 8rem;
+}
+
+.foodCard .bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+}
+
+.foodCard .price {
+    font-size: 1.5rem;;
+}
+
+.foodCard .button {
+    height: 3rem;
+    width: 3rem;
+}

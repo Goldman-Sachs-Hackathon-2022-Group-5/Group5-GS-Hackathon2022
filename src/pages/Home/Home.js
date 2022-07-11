@@ -2,10 +2,11 @@ import React from 'react';
 import HomeBanner from '../../components/Home/Banner';
 import { Container } from '../../components/reusable/Styles';
 import './Home.css';
-import { testFunction } from '../../database/api';
+import { getAllFoodByRestaurantId } from '../../database/api';
 import PopularSection from '../../components/Home/Popular';
 import CuisineSection from '../../components/Home/Cuisines';
 import '../../components/Restaurants/RestaurantBlock.css';
+import { FoodCard } from '../../components/Food/FoodCard';
 
 const Home = () => {
     return (
@@ -18,7 +19,7 @@ const Home = () => {
                 </Container>
             </Container>
             <div>
-                <button onClick={() => testFunction("MTA")}>click me</button>
+                <button onClick={() => getAllFoodByRestaurantId(1)}>click me</button>
             </div>
         </body>
     );
