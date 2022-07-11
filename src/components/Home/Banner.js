@@ -11,7 +11,8 @@ const { Option } = StyledSelect;
 
 const HomeBanner = () => {
     const location = useSelector((state) => state.location.value)
-    const [local, setLocal] = useState('')
+    const curLoc = location !== undefined ? location : undefined
+    const [local, setLocal] = useState(curLoc)
     const dispatch = useDispatch()
 
     return (
@@ -29,7 +30,7 @@ const HomeBanner = () => {
                             placeholder="Select your location"
                             onChange={(value)=>{setLocal(value)}}
                             width={'330px'}
-                            value={location}
+                            value={local}
                             >
                             <Option value={LOCATIONS_LIST.MTA.code}>{LOCATIONS_LIST.MTA.name}</Option>
                             <Option value={LOCATIONS_LIST.RFL.code}>{LOCATIONS_LIST.RFL.name}</Option>

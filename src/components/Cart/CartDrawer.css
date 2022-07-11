@@ -1,11 +1,53 @@
-.row {
+.cartrow {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    width: 100%;
+    justify-content: flex-end;
+    width: 90%;
  }
+
+ .restaurantname {
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90%;
+    font-family: Poppins;
+    font-size: 22px;
+ }
+
+ .section {
+   flex-direction: row;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   text-align: center;
+   width: 90%;
+   font-family: Poppins;
+   font-size: 20px;
+   margin-top: 2rem;
+}
+
+.note {
+   flex-direction: column;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 90%;
+   font-family: Poppins;
+   font-size: 18px;
+}
+
+.totalprice {
+   flex-direction: row;
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-start;
+   width: 90%;
+   font-family: Poppins;
+   font-size: 18px;
+   margin-top: 2rem;
+}
 
  .counter {
     font-family: Poppins;
@@ -20,6 +62,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: Poppins-Medium;
+ }
+
+ .options {
+    margin-top: 1rem;
+    width: 90%;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
  }
 
 .itemcard {
@@ -31,17 +82,17 @@
    justify-content: space-between;
    cursor: pointer;
    transition: transform 200ms ease-in;
-   margin-top: 20px;
-   margin-right: 20px;
+   margin-top: 0.5rem;
    margin-bottom: 5px;
-   width: 25rem;
-   height: 12rem;
+   width: 90%;
+   height: 7rem;
 }
 
 .itemcard .body {
    display: flex;
    flex-direction: row;
    margin: 1rem;
+   width: 90%;
 }
 
 .itemcard .text {
@@ -51,8 +102,8 @@
 
 .itemcard .image {
    object-fit: cover;
-   width: 10rem;
-   height: 10rem;
+   width: 5rem;
+   height: 5rem;
    border-radius: 5px;
 }
 
@@ -68,7 +119,7 @@
    flex-direction: column;
    justify-content: space-between;
    margin-left: 1rem;
-   width: 12rem;
+   width: 90%;
 }
 
 .itemcard .footer {
@@ -76,9 +127,10 @@
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
+   width: 100%;
 }
 
 .itemcard .price {
-   font-size: 1.5rem;
+   font-size: 1.2rem;
    font-family: Poppins-Medium;
 }

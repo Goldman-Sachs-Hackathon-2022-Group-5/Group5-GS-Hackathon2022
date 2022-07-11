@@ -16,7 +16,7 @@ export const FoodBlock = ({id, buttonFunction}) => {
                             key={food.id} 
                             imageUrl={food.url} 
                             name={food.name} 
-                            desc={"AAAAAAAA"} 
+                            desc={"Indulge yourself in this delicious food!"} 
                             price={food.price} 
                             buttonFunction={() => buttonFunction(food)}/>
                     )

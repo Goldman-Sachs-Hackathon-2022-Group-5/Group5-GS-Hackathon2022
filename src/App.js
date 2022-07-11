@@ -5,6 +5,7 @@ import Cuisines from './pages/Cuisines/Cuisines';
 import Restaurant from './pages/Restaurants/Restaurants';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/NavBar';
+import Checkout from './pages/Checkout/Checkout';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/cuisine/:cuisineid' element={<Cuisines />} />
         <Route path='/restaurants/:restaurantid' element={<Restaurant/>} />
         <Route path='/menu' element={<Home/>} />
+        <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
     </Router>
   );

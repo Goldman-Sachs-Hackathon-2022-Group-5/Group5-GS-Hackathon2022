@@ -1,0 +1,35 @@
+body.checkoutPage {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    margin-top: 20px;
+}
+
+.styleBtn {
+    margin: 10px 0px 10px 0px
+}
+
+.ant-card-head {
+    border-radius: 0.5rem;
+    background-color: #94B7EA;
+}
+
+.ant-card-head-title {
+    font-family: Poppins-Medium, sans-serif;
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.customCard {
+    box-shadow: 0 2px 20px #e1e5ee;
+    border-radius: 0.5rem;
+    transition: transform 200ms ease-in;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
