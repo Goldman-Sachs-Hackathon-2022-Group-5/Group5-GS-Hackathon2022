@@ -3,7 +3,7 @@ import { Button, Drawer } from 'antd';
 import { StyledButton } from '../reusable/Button';
 import './Drawer.css'
 
-const AddToCartDrawer = ({onClose, visible}) => {
+const CartDrawer = ({onClose, visible}) => {
     const [count, setCount] = useState(1)
 
     const increment = () => {
@@ -29,12 +29,12 @@ const AddToCartDrawer = ({onClose, visible}) => {
             <Button onClick={increment}>+</Button>
         </div>
         <div className='row'>
-            <StyledButton width={'90%'} onClick={()=>{console.log('add to cart')}}>
-                Add to Cart
+            <StyledButton width={'90%'} onClick={()=>{console.log('Check out')}}>
+                Check Out
             </StyledButton>
         </div>
     </Drawer>
   )
 }
 
-export default AddToCartDrawer
+export default CartDrawer

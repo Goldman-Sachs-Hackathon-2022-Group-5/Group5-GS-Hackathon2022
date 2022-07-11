@@ -25,7 +25,22 @@
     text-align: center;
  }
 
- .gallery {
+ .peopleBox {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   font-family: Poppins-Medium;
+   color: #346EBE;
+   margin-bottom: 1rem;
+}
+
+.peopleIcon {
+   height: 1rem;
+   width: 1rem;
+   margin-right: 0.5rem;
+}
+
+ .foodgallery {
    align-content: space-between;
    display: flex;
    flex-wrap: wrap;

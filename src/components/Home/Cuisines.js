@@ -8,6 +8,7 @@ const CuisineSection = () => {
   const cuisineCardsArray = CUISINE_LIST.map(c => (
    <Link to={c.link}>
       <Card 
+        key={c.title} 
         url={c.image}
         title={c.title}
       /> 
