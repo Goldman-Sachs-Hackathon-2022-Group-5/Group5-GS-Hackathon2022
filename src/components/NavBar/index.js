@@ -14,7 +14,7 @@ import { StyledSelect } from '../reusable/Styles';
 import { LOCATIONS_LIST } from '../../utils/const';
 import { useLocation } from 'react-router-dom';
 import Logo from '../../assets/Images/LongLogo.png'
-import CartDrawer from '../Cart/Drawer';
+import CartDrawer from '../Cart/CartDrawer';
 import { useSelector, useDispatch } from 'react-redux'
 import { setLocation } from '../../redux/redux';
 
