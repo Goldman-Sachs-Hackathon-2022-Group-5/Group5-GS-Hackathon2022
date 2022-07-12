@@ -18,7 +18,6 @@ export const StyledButton = styled(Button)`
     margin-right: ${(props) => (props.right ? props.right : '0px')};
     height: 40px;
 
-
     transition: all 0.2s ease-in-out;
     text-decoration: none;
 
@@ -28,8 +27,18 @@ export const StyledButton = styled(Button)`
         color: #010606;
         border: 2px solid #4D5566;
     }
+
+    &:disabled,
+    [disabled]{
+      border: 2px solid #fff;
+      background-color: #cccccc;
+      color: #666666;
+    }
+
   }
 `;
+
+
 
 export const BorderedButton = styled(Button)`
 && {

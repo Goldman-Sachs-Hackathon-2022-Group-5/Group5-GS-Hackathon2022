@@ -7,13 +7,26 @@
     width: 100%;
  }
 
- .gallery {
+ .cuisinegallery {
    align-content: space-between;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
    height: 100%;
 }
+
+.gallery {
+   align-content: space-between;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   height: 100%;
+}
+
+/* .gallery::after {
+   content: "";
+   flex: auto;
+ } */
 
  .column {
    display: flex;

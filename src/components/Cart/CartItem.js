@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import './CartDrawer.css'
-import { Button } from 'antd'
-import { addToCart } from '../../redux/cartredux';
+import { Button, Popconfirm } from 'antd'
+import { CloseOutlined } from '@ant-design/icons'
+import { addToCart, deleteItem } from '../../redux/cartredux';
 import { useDispatch } from 'react-redux'
 
 export const ItemCard = ({food, quantity}) => {
@@ -30,13 +31,22 @@ export const ItemCard = ({food, quantity}) => {
         }
     }
 
+    const removeItem = (id) => {
+        dispatch(deleteItem(id))
+    }
+
     return (
             <div className='itemcard'>
                 <div className='body'>
                     <img src={food.url} className="image" alt=""/>
                     <div className="details">
-                        <div className="text">
+                        <div className="itemtext">
                             <h2 className="title">{food.name}</h2>
+                            <Popconfirm placement="topLeft" title={'Remove item?'} onConfirm={() => {
+                                console.log('removing id: ', food.id)
+                                removeItem(food.id)}} okText="Yes" cancelText="No">
+                                <CloseOutlined height={'1.2rem'}/>
+                            </Popconfirm>
                         </div>
                         <div className="footer">
                             <div className="price">${food.price}.00</div>

@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { getRestaurants } from "../../database/api";
 import { RestaurantCard } from "./RestaurantCard";
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { setRestaurants } from "../../redux/redux";
 
 export const RestaurantBlock = ({location, restaurantName}) => {
-    const [arrOfRes, updateArrOfRes] = useState();
+    const dispatch = useDispatch();
+    const filteredRestaurants = useSelector((state) => state.location.filteredRestaurants)
 
-    const [res, updateRes] = useState();
+    const [arrOfRes, updateArrOfRes] = useState();
 
     const mapResToRestaurantCard = ({address, imageurl, name, id}) => {
         return (
@@ -26,7 +29,8 @@ export const RestaurantBlock = ({location, restaurantName}) => {
         restaurants.then((res) => {
             const parsedBody = (JSON).parse(res.body)
             updateArrOfRes(parsedBody)
-            updateRes(parsedBody.map(mapResToRestaurantCard))
+            // updateRes(parsedBody.map(mapResToRestaurantCard))
+            if (location === undefined) dispatch(setRestaurants(parsedBody.map(mapResToRestaurantCard)))
         })
     }, [])
 
@@ -41,8 +45,9 @@ export const RestaurantBlock = ({location, restaurantName}) => {
         }
 
         const filteredResCard = filteredRes.map(mapResToRestaurantCard)
-        updateRes(filteredResCard)
+        // updateRes(filteredResCard)
+        dispatch(setRestaurants(filteredResCard))
     }, [location, restaurantName])
 
-    return res;
+    return filteredRestaurants;
 }

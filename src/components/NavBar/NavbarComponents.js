@@ -19,6 +19,15 @@ export const NavWrapper = styled.div`
   height: 44px;
 `
 
+export const LocationText = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: 'center';
+  font-size: 12px;
+  font-family: Poppins-Medium;
+`
+
 export const IconDiv = styled.div`
   color: #fff;
   display: flex;

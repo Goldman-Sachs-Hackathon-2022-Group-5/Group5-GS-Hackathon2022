@@ -6,27 +6,21 @@ import {
   NavMenu,
   NavBtn,
   NavWrapper,
-  IconDiv
+  IconDiv,
+  LocationText
 } from './NavbarComponents';
 import { Avatar } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons'
-import { StyledSelect } from '../reusable/Styles';
 import { LOCATIONS_LIST } from '../../utils/const';
 import { useLocation } from 'react-router-dom';
 import Logo from '../../assets/Images/LongLogo.png'
 import CartDrawer from '../Cart/CartDrawer';
-import { useSelector, useDispatch } from 'react-redux'
-import { setLocation } from '../../redux/redux';
-
-
-
-const { Option } = StyledSelect;
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
   const curRoute = useLocation();
   const [isCartVisible, setCartVisible] = useState(false);
   const location = useSelector((state) => state.location.value)
-  const dispatch = useDispatch()
 
   const showDrawer = () => {
       setCartVisible(true);
@@ -44,19 +38,15 @@ const Navbar = () => {
             <img src={Logo} alt='logo' height='55' />
           </NavLink>
           {
-            curRoute.pathname !== "/" && 
-            <StyledSelect 
-              size='large'
-              placeholder="Select your location"
-              onChange={(value)=>{dispatch(setLocation(value))}}
-              width={'330px'}
-              top={'0px'}
-              left={'40px'}
-              value={location}
-              >
-              <Option value={LOCATIONS_LIST.MTA.code}>{LOCATIONS_LIST.MTA.name}</Option>
-              <Option value={LOCATIONS_LIST.RFL.code}>{LOCATIONS_LIST.RFL.name}</Option>
-          </StyledSelect>
+            curRoute.pathname !== "/" && location !== undefined &&
+            <LocationText>
+              <h2 style={{color: '#fff', marginRight: '0.5rem', marginBottom: 0, display: 'flex', flexDirection:'column', justifyContent: 'center'}}>
+              Location set: 
+              </h2>
+              <h2 style={{color: '#94B7EA', marginBottom: 0, display: 'flex', flexDirection:'column', justifyContent: 'center'}}>
+                {LOCATIONS_LIST[location].name}
+              </h2>
+            </LocationText>
           }    
         </NavWrapper>
         <Bars />
