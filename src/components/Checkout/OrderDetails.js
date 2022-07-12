@@ -1,11 +1,26 @@
-import { Checkbox } from 'antd'
+import { Checkbox, message } from 'antd'
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { LOCATIONS_LIST } from '../../utils/const'
 import { StyledButton } from '../reusable/Button'
+import { addToOrder  } from '../../redux/orderRedux'
+import { Link } from 'react-router-dom'
+import { clearCart } from '../../redux/cartredux'
 import './styles.css'
 
-export const OrderDetails = ({location, timeslot}) => {
-
+export const OrderDetails = ({cart, location, timeslot}) => {
+  const dispatch = useDispatch();
+  const onSubmit = () => {
+    const order = {
+      cart: cart,
+      location: location,
+      timeslot: timeslot,
+      status: 'Order Submitted'
+    }
+    dispatch(addToOrder(order))
+    dispatch(clearCart())
+    message.success("Order submitted successfully!")
+  } 
   return (
         <div className='summarycard'>
             <div className='deliverydetails'>
@@ -21,7 +36,9 @@ export const OrderDetails = ({location, timeslot}) => {
                 Send me reminder emails for reimbursement
               </Checkbox>
             </div>
-            <StyledButton style={{marginTop: '2rem'}}>Submit Order</StyledButton>
+            <Link to='/'>
+            <StyledButton onClick={onSubmit} style={{marginTop: '2rem'}}>Submit Order</StyledButton>
+            </Link>
         </div>
       )
 }

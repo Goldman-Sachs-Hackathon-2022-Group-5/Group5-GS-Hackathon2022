@@ -157,7 +157,7 @@ const CartDrawer = ({ onClose, visible }) => {
                                 </div>
                             </div>
                         </div>
-                        {   (delTime === undefined || location === undefined) &&
+                        {   (delTime === '' || location === undefined) &&
                             <div className='row'>
                                 <Alert
                                     description="Please input both delivery location and timeslot."
@@ -169,7 +169,7 @@ const CartDrawer = ({ onClose, visible }) => {
                         }
                         
                         <div className='row'>
-                            <StyledButton width={'90%'} onClick={onCheckOut} disabled={delTime === undefined || location === undefined}>
+                            <StyledButton width={'90%'} onClick={onCheckOut} disabled={delTime === '' || location === undefined}>
                                 <Link to='/checkout'>
                                 Check Out
                                 </Link>

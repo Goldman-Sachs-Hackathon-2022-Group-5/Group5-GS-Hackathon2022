@@ -48,3 +48,19 @@
     transition: all 0.1s ease-in-out;
     color: #010606;
  }
+
+ .orderItemCard {
+    color: #fff;
+    box-shadow: 0 2px 20px #e1e5ee;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    width: 30em;
+    height: 200px
+ }
