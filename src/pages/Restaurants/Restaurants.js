@@ -111,22 +111,20 @@ const Restaurant = ({}) => {
                 <h3 className="subtitle" ref={popularRef}>Popular Picks</h3>
 
                 <div className="foodgallery">
-                    <FoodBlock id={restaurantId} buttonFunction={showDrawer}/>
+                    <FoodBlock isSet={true} id={restaurantId} buttonFunction={showDrawer}/>
                 </div>
-
-                {/* <StyledButton onClick={showDrawer}>Get this</StyledButton> */}
             
                 <h3 className="subtitle" ref={setsRef}>Sets</h3>
 
-                {/* <div className="gallery">
-                    <FoodBlock id={restaurantId}/>
-                </div> */}
+                <div className="foodgallery">
+                    <FoodBlock id={restaurantId} isSet={true} buttonFunction={showDrawer}/>
+                </div>
 
                 <h3 className="subtitle" ref={alacarteRef}>Ala Carte</h3>
 
-                {/* <div className="gallery">
-                    <FoodBlock id={restaurantId}/>
-                </div> */}
+                <div className="foodgallery">
+                    <FoodBlock id={restaurantId} isSet={false} buttonFunction={showDrawer}/>
+                </div>
 
                 <h3 className="subtitle" ref={beverageRef}>Beverages</h3>
 

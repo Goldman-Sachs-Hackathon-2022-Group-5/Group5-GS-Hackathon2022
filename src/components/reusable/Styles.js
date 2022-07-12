@@ -58,9 +58,13 @@ export const RowContainer = styled(Row)`
 
 export const StyledInput = styled(Input)`
   && {
-    width: 100%;
-    border-radius: 1rem;
-    height: 2rem;
+    width: 40%;
+    border-radius: 2rem;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    font-family: Poppins-Medium;
+    font-size: 15px;
   }
 `
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Drawer, Radio, Space, Alert } from 'antd';
+import { Drawer, Radio, Space, Alert, Tooltip } from 'antd';
 import { StyledButton } from '../reusable/Button';
 import { useSelector, useDispatch } from 'react-redux'
 import './CartDrawer.css'
@@ -9,6 +9,8 @@ import { LOCATIONS_LIST } from '../../utils/const';
 import { setLocation } from '../../redux/redux';
 import { Link } from 'react-router-dom';
 import { setCart, setTimeslot } from '../../redux/cartredux';
+import { InfoCircleTwoTone } from '@ant-design/icons'
+
 // import { getRestaurantById } from '../../database/api';
 
 const { Option } = StyledSelect;
@@ -100,15 +102,21 @@ const CartDrawer = ({ onClose, visible }) => {
 
                         <div className='cartItems'>
                             <div className='section'>
-                                Delivery Timeslot
+                                Delivery Timeslot 
+                                <Tooltip 
+                                    title="Cut-off times: Lunch (10.30am), Dinner (5.30pm)">
+                                    <InfoCircleTwoTone style={{ marginLeft: '0.3rem', fontSize: '20px', marginTop: '5px' }} />
+                                </Tooltip>
+
                             </div>
+
                             <div className='options'>
                                 <Radio.Group onChange={onChange} value={delTime}>
                                     <Space direction='vertical'>
-                                        <Radio value={'tdylunch'}>Today, Lunch (11am-12pm)</Radio>
-                                        <Radio value={'tdydinner'}>Today, Dinner (6pm-7pm)</Radio>
-                                        <Radio value={'tmrlunch'}>Tomorrow, Lunch (11am-12pm)</Radio>
-                                        <Radio value={'tmrdinner'}>Tomorrow, Dinner (6pm-7pm)</Radio>
+                                        <Radio disabled value={'tdylunch'}>Today, Lunch (11am-12pm)</Radio>
+                                        <Radio value={'Today, 13 July 2022, Dinner (6pm-7pm)'}>Today, Dinner (6pm-7pm)</Radio>
+                                        <Radio value={'Tomorrow, 14 July 2022, Lunch (11am-12pm)'}>Tomorrow, Lunch (11am-12pm)</Radio>
+                                        <Radio value={'Tomorrow, 14 July 2022, Dinner (6pm-7pm)'}>Tomorrow, Dinner (6pm-7pm)</Radio>
                                     </Space>
                                 </Radio.Group>
                             </div>
@@ -144,7 +152,7 @@ const CartDrawer = ({ onClose, visible }) => {
                                 <div className='section'>
                                     Total
                                 </div>
-                                <div className='totalprice'>
+                                <div className='total'>
                                     ${total.toFixed(2)}
                                 </div>
                             </div>

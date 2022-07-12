@@ -9,7 +9,7 @@ import {
   IconDiv,
   LocationText
 } from './NavbarComponents';
-import { Avatar } from 'antd';
+import { Avatar, Badge } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons'
 import { LOCATIONS_LIST } from '../../utils/const';
 import { useLocation } from 'react-router-dom';
@@ -21,6 +21,9 @@ const Navbar = () => {
   const curRoute = useLocation();
   const [isCartVisible, setCartVisible] = useState(false);
   const location = useSelector((state) => state.location.value)
+  const cartArray = useSelector((state) => state.cart.itemsInCart)
+
+  const cartSize = cartArray !== undefined ? cartArray.length : 0
 
   const showDrawer = () => {
       setCartVisible(true);
@@ -53,11 +56,13 @@ const Navbar = () => {
         <NavWrapper>
             <NavMenu>
               <IconDiv>
+                <Badge count={cartSize} size={'small'}>
                 <ShoppingCartOutlined style={{fontSize: 20, color: '#15cdfc'}} onClick={showDrawer}/>
+                </Badge>
               </IconDiv>
             </NavMenu>
             <NavBtn>
-              <Avatar src="https://joeschmoe.io/api/v1/random" width={40}/>
+                <Avatar src="https://joeschmoe.io/api/v1/random" width={40}/>
             </NavBtn>
         </NavWrapper>
       </Nav>

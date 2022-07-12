@@ -7,7 +7,7 @@ export const Card = ({url, title}) => {
             <div className="card">
                 <img src={url} height='150px' width="100%" alt=''/>
             </div>
-            <h2 className="cardtitle"> {title} </h2>
+            <h2 className="cuisinecardtitle"> {title} </h2>
         </div>
     )
 }

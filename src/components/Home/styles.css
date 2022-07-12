@@ -1,7 +1,7 @@
-.row {
+.sectionrow {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     margin-top: 20px;
     width: 100%;
@@ -31,7 +31,7 @@
  .column {
    display: flex;
    flex-direction: column;
-   align-items: center;
+   align-items: flex-start;
    justify-content: flex-start;
    margin-top: 20px;
    width: 100%;
