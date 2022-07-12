@@ -12,6 +12,7 @@ export const OrderItemCard = ({order}) => {
   const timeSlot = order.timeslot;
   const status = order.status;
   const delFee = Math.random() * 5
+  const savings = Math.random() * 3
 
   return (
     <div className='orderItemCard'>
@@ -50,7 +51,7 @@ export const OrderItemCard = ({order}) => {
             fontFamily: 'Poppins-Medium',
             fontSize: '15px',
             color: '#808080',
-            marginBottom: 0
+            marginBottom: '10px'
         }}>
             {location} • {timeSlot}
           </h3>
@@ -59,6 +60,14 @@ export const OrderItemCard = ({order}) => {
           }}>
             ${(totalPrice + delFee).toFixed(2)}
           </h2>
+          <h3 style={{
+            fontFamily: 'Poppins-Medium',
+            fontSize: '12px',
+            color: '#808080',
+            marginBottom: 0
+        }}>
+            Saved ${savings.toFixed(2)} on delivery fee
+          </h3>
         </div>
       </div>    
     </div>
