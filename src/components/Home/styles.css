@@ -1,7 +1,7 @@
-.row {
+.sectionrow {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     margin-top: 20px;
     width: 100%;
@@ -31,7 +31,7 @@
  .column {
    display: flex;
    flex-direction: column;
-   align-items: center;
+   align-items: flex-start;
    justify-content: flex-start;
    margin-top: 20px;
    width: 100%;
@@ -48,3 +48,31 @@
     transition: all 0.1s ease-in-out;
     color: #010606;
  }
+
+ .orderItemCard {
+    background-color: #fff;
+    color: #555555;
+    font-family: Poppins;
+    box-shadow: 0 2px 20px #e1e5ee;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    width: 28em;
+    height: 13em;
+    padding: 1.5rem;
+ }
+
+.orderItemCardRow {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+   width: 100%;
+}

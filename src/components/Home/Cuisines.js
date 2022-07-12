@@ -6,25 +6,23 @@ import { Card } from '../ItemCard/Card';
 
 const CuisineSection = () => {
   const cuisineCardsArray = CUISINE_LIST.map(c => (
-   <Link to={c.link}>
-      <Card 
-        key={c.title} 
+    <Link to={c.link}>
+      <Card
+        key={c.title}
         url={c.image}
         title={c.title}
-      /> 
-   </Link>
+      />
+    </Link>
   ));
 
-return (
-  <div className='column'>
-    <div className='row'>
+  return (
+    <div className='column'>
       <h3 className="sectiontitle">Browse by cuisines</h3>
+      <div className='cuisinegallery'>
+        {cuisineCardsArray}
+      </div>
     </div>
-    <div className='cuisinegallery'>
-      {cuisineCardsArray}
-    </div>
-  </div>
-)
+  )
 }
 
 export default CuisineSection;

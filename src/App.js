@@ -6,6 +6,7 @@ import Restaurant from './pages/Restaurants/Restaurants';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import Checkout from './pages/Checkout/Checkout';
+// import GlobalFooter from 'ant-design-pro/lib/GlobalFooter';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/menu' element={<Home/>} />
         <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
+      {/* <GlobalFooter/> */}
     </Router>
   );
 }

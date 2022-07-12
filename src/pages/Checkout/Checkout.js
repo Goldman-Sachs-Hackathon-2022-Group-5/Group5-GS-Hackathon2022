@@ -20,7 +20,7 @@ const Checkout = () => {
                         Order Summary
                     </h2>
                     <OrderSummary cart={cart}/>
-                    <OrderDetails location={location} timeslot={timeslot} />
+                    <OrderDetails cart={cart} location={location} timeslot={timeslot} />
 
                 </div>
             </div>
