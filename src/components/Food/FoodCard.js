@@ -18,7 +18,6 @@ export const FoodCard = ({imageUrl, name, desc, price, buttonFunction}) => {
                                 onClick={buttonFunction} 
                                 alt=""/>
                         </div>
-                        
                     </div>
                 </div>
             </div>

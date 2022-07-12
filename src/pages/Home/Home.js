@@ -8,7 +8,6 @@ import '../../components/Restaurants/RestaurantBlock.css';
 import { useSelector } from 'react-redux'
 import OrderStatusSection from '../../components/Home/Order';
 
-
 const Home = () => {
     const location = useSelector((state) => state.location.value)
     const locString = location !== undefined ? `near ${location}` : ''

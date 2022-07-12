@@ -1,6 +1,5 @@
 import React from "react";
 import './Checkout.css';
-import { StyledButton } from "../../components/reusable/Button";
 import { useSelector } from 'react-redux'
 import { OrderSummary } from "../../components/Checkout/OrderSummary";
 import { OrderDetails } from "../../components/Checkout/OrderDetails";

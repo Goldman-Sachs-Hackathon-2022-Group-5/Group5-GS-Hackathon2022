@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Drawer, Radio, Space, Alert } from 'antd';
 import { StyledButton } from '../reusable/Button';
 import { useSelector, useDispatch } from 'react-redux'
