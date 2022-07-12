@@ -26,8 +26,6 @@ export const FoodBlock = ({id, buttonFunction}) => {
         })
     }, [id, buttonFunction])
 
-
-    
     return (
         res
     )
