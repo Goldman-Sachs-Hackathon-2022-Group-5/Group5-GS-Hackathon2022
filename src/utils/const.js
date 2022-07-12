@@ -10,6 +10,11 @@ import Local from '../assets/Images/local.jpeg'
 import Seafood from '../assets/Images/seafood.jpeg'
 import Snack from '../assets/Images/snack.jpeg'
 import Western from '../assets/Images/western.jpeg'
+import {
+    CheckCircleOutlined,
+    SyncOutlined,
+    SendOutlined
+} from '@ant-design/icons'
 
 const LOCATIONS_LIST = {
     MTA: {
@@ -21,6 +26,32 @@ const LOCATIONS_LIST = {
         name: 'Raffles Link'
     }
 }
+
+const ORDER_STATUS = {
+    SUBMITTED: 'Order submitted',
+    PREPARING: 'Preparing your order',
+    DELIVERING: 'Delivery in progress',
+    DELIVERED: 'Delivered'
+  }
+
+const STATUS_STYLES_MAP = {
+    [ORDER_STATUS.SUBMITTED]: {
+      color: '#346EBE',
+      icon: <CheckCircleOutlined/>,
+    },
+    [ORDER_STATUS.PREPARING]: {
+      color: 'orange',
+      icon: <SyncOutlined spin />,
+    },
+    [ORDER_STATUS.DELIVERING]: {
+      color: '#346EBE',
+      icon: <SendOutlined />,
+    },
+    [ORDER_STATUS.DELIVERED]: {
+      color: 'green',
+      icon: <CheckCircleOutlined />,
+    }
+  }
 
 const CUISINE_LIST = [
     {
@@ -98,4 +129,4 @@ const CUISINE_LIST = [
 ]
 
 
-export {LOCATIONS_LIST, CUISINE_LIST}
+export {LOCATIONS_LIST, CUISINE_LIST, ORDER_STATUS, STATUS_STYLES_MAP}

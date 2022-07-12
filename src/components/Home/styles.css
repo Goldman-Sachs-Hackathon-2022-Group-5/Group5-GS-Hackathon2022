@@ -50,17 +50,29 @@
  }
 
  .orderItemCard {
-    color: #fff;
+    background-color: #fff;
+    color: #555555;
+    font-family: Poppins;
     box-shadow: 0 2px 20px #e1e5ee;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
     transition: transform 200ms ease-in;
     margin-top: 20px;
     margin-right: 20px;
     margin-bottom: 5px;
-    width: 30em;
-    height: 200px
+    width: 28em;
+    height: 13em;
+    padding: 1.5rem;
  }
+
+.orderItemCardRow {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+   width: 100%;
+}

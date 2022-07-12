@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import { RestaurantBlock } from '../Restaurants/RestaurantBlock';
 import './styles.css';
-import {Space} from "antd";
 import { StyledInput } from '../reusable/Styles';
 
 const PopularSection = ({location, locString}) => {

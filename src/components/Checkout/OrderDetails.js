@@ -15,7 +15,7 @@ export const OrderDetails = ({cart, location, timeslot}) => {
       cart: cart,
       location: location,
       timeslot: timeslot,
-      status: 'Order Submitted'
+      status: 'Order submitted'
     }
     dispatch(addToOrder(order))
     dispatch(clearCart())

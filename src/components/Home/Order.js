@@ -5,10 +5,19 @@ import './styles.css';
 
 const OrderStatusSection = () => {
   const orders = useSelector((state) => state.order.ordersPlace)
+  const ordersReversed = orders.slice().reverse()
 return (
   <div className='column'>
       <h3 className="sectiontitle">Order again</h3>
-      {orders.map(order => <OrderItemCard order={order}/> )}
+      <div style={{ 
+        display: 'flex', 
+        flexDirection: 'row', 
+        // overflowX: 'scroll',
+        width: '100%',
+        // justifyContent: 'space-between'
+      }}>
+        {ordersReversed.map(order => <OrderItemCard order={order}/> )}
+      </div>
     
   </div>
 )

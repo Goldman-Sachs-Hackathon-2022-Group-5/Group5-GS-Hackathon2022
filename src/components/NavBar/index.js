@@ -62,7 +62,7 @@ const Navbar = () => {
               </IconDiv>
             </NavMenu>
             <NavBtn>
-                <Avatar src="https://joeschmoe.io/api/v1/josephine" width={40}/>
+                <Avatar src="https://media-exp2.licdn.com/dms/image/C5603AQHBddL2xeTvnQ/profile-displayphoto-shrink_200_200/0/1613446958854?e=2147483647&v=beta&t=kY4PSyTgrK9yIRccPY0oJa-yVxKJhGQePoWWxtH12OQ" width={40}/>
             </NavBtn>
         </NavWrapper>
       </Nav>
