@@ -49,7 +49,7 @@ const CUISINE_LIST = [
     },
     {   
         id: 5,
-        title: "Fast Food",
+        title: "Fastfood",
         image: Fastfood,
         link: "/cuisine/Fastfood"
     },

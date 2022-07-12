@@ -63,7 +63,7 @@ const AddToCartDrawer = ({onClose, visible, food}) => {
             <Button onClick={increment}>+</Button>
         </div>
         <div className='row'>
-            <StyledButton width={'90%'} onClick={onClick}>
+            <StyledButton width={'90%'} onClick={onClick} disabled={count===0 ? true : false}>
                 Add to Cart
             </StyledButton>
         </div>

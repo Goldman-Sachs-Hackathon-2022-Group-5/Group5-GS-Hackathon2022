@@ -6,6 +6,7 @@ import PopularSection from '../../components/Home/Popular';
 import CuisineSection from '../../components/Home/Cuisines';
 import '../../components/Restaurants/RestaurantBlock.css';
 import { useSelector } from 'react-redux'
+import OrderStatusSection from '../../components/Home/Order';
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <HomeBanner />
             <Container>
                 <Container align='flex-start' width='70%' >
+                    <OrderStatusSection />
                     <PopularSection location={location} locString={locString}/>
                     <CuisineSection/>
                 </Container>

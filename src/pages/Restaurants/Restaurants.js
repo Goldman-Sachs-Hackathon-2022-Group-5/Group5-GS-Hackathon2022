@@ -12,7 +12,7 @@ import { Avatar, Tooltip } from 'antd';
 
 const { TabPane } = Tabs;
 
-const Restaurant = () => {
+const Restaurant = ({}) => {
     const [restaurant, setRestaurant] = useState()
     const restaurantId = useLocation().pathname.split('/')[2]
     const [isCartVisible, setCartVisible] = useState(false);
@@ -90,6 +90,8 @@ const Restaurant = () => {
                         <Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />
                     </Tooltip>
                     <Avatar style={{ backgroundColor: '#1890ff' }} icon={<AntDesignOutlined />} />
+                    <Avatar style={{ backgroundColor: '#1890ff' }} icon={<AntDesignOutlined />} />
+
                 </Avatar.Group>
                     <p style={{ marginBottom: 0, marginLeft: '1rem'}}>{5} other people are getting this</p>
                 </div>

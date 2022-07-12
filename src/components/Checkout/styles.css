@@ -6,15 +6,101 @@
     width: 90%;
  }
 
- .restaurantname {
+ .summarycard {
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 0.5rem;
+   width: 90%;
+   box-shadow: 0 2px 20px #e1e5ee;
+   margin-top: 1rem;
+   padding: 1rem;
+ }
+
+ .summaryrow {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   width: 95%;
+ }
+
+ .deliverydetails {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   width: 95%;
+   margin-top: 1rem;
+ }
+
+ .payment {
+   display: flex;
+   flex-direction: column;
+   background-color: #e8eaf0;
+   box-shadow: 0 2px 20px #e1e5ee;
+   border-radius: 0.5rem;
+   width: 35%;
+   height: 20rem;
+   margin-top: 1rem;
+   padding: 1.5rem;
+
+ }
+
+ .ordersummarybody {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   width: 90%;
+ }
+
+ .cardtitle {
     flex-direction: row;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     width: 90%;
     font-family: Poppins;
-    font-size: 22px;
+    font-size: 25px;
  }
+
+ .cardsubtitle {
+   flex-direction: row;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   width: 90%;
+   font-family: Poppins-Medium;
+   font-size: 20px;
+   margin-bottom: 0;
+}
+
+.cardsubtitle2 {
+   flex-direction: row;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   width: 90%;
+   font-family: Poppins;
+   font-size: 20px;
+   margin-bottom: 0;
+}
+
+.cardsubsubtitle {
+   flex-direction: row;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   width: 90%;
+   font-family: Poppins-Medium;
+   font-size: 16px;
+   margin-bottom: 0;
+   margin-top: 1rem;
+   color: #989898;
+}
 
  .section {
    flex-direction: row;

@@ -20,7 +20,7 @@ return (
     <div className='row'>
       <h3 className="sectiontitle">Browse by cuisines</h3>
     </div>
-    <div className='gallery'>
+    <div className='cuisinegallery'>
       {cuisineCardsArray}
     </div>
   </div>
