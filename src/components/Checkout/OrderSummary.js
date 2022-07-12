@@ -75,7 +75,7 @@ export const OrderSummary = ({ cart }) => {
                         *Price does not reflect final price, subject to changes in delivery fee at cut-off time.
                     </p>
 
-                    <StyledButton width={'100%'}>Link Credit Card</StyledButton>
+                    <StyledButton disabled width={'100%'}>Linked Credit Card</StyledButton>
                 </div>
             </div>
         </div>

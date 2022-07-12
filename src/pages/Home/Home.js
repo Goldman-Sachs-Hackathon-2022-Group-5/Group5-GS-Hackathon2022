@@ -22,6 +22,19 @@ const Home = () => {
                     <CuisineSection/>
                 </Container>
             </Container>
+            <div style={{
+                marginTop: '2rem', 
+                backgroundColor: 'black', 
+                height: '10rem',
+                color: 'white',
+                fontFamily: 'Poppins-Medium',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}
+                >
+                    Ⓒ Goldman Sachs Intern Hackathon Group 5 
+                </div>
         </body>
     );
 }
