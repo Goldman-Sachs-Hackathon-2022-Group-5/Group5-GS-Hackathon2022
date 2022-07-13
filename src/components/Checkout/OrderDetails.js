@@ -33,7 +33,7 @@ export const OrderDetails = ({cart, location, timeslot}) => {
               <h2 className='cardsubtitle'>{timeslot}</h2>
               <h3 className='cardsubsubtitle'>Mark for reimbursement: </h3>
               <Checkbox style={{fontFamily: 'Poppins-Medium', fontSize: '16px'}} >
-                Send me reminder emails for reimbursement
+                Send to Concur for reimbursement
               </Checkbox>
             </div>
             <Link to='/'>
